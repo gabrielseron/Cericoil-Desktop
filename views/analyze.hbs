@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cericoil : Analyze</title>
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="icon" type="image/svg" href="/assets/img/logo_blue.svg"/>
+    <script src="/assets/scripts/script.js" defer></script>
+</head>
+<body class="analyze">
+    <div class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/analyze">Analyze</a>
+        <a href="/changeMail">Change Mail</a>
+        <a href="/changePass">Change Password</a>
+        <a href="/signout" class="signout">Signout</a>
+    </div>
+
+    <div class="hamburgerContainer">
+        <span class="hamburger" onclick="openNav()">&#9776;</span>
+    </div>
+
+    <h1>Start to analyze emails</h1>
+
+    <div class="analyze-container">
+    {{#if result}}
+        <div class="formContainer analyze-content">
+    {{else}}
+        <div class="formContainer">
+    {{/if}}
+        <h3>Analyze Email</h3>
+        <form action="analyze" method="POST">
+            {{#each errorList}}
+                <p class="error-message">{{message}}</p>
+            {{/each}}
+            {{#if message}}
+                <p class="error-message">{{message}}</p>
+            {{/if}}
+            {{#if error}}
+                <p class="error-message">{{error}}</p>
+            {{/if}}
+            <input type="email" name="fraudVerificationMail" onClick="this.select();" placeholder="Analyze Email" value={{mail}}>
+            <button>Analyze !</button>
+        </form>
+    </div>
+
+    {{#if result}}
+        <div class="seon results">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2"><p class="seonLink">Seon</p></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each seon}}
+                        <tr>
+                            <td class="key">{{@key}} : </td>
+                            <td>{{this}}</td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        <div class="iqs results">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2"><p class="iqsLink">IQS</p></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each iqs}}
+                        <tr>
+                            <td class="key">{{@key}} : </td>
+                            <td>{{this}}</td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    {{/if}}
+</div>
+</body>
+</html>

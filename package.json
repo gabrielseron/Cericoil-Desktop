@@ -1,0 +1,29 @@
+{
+  "name": "Cericoil",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "electron": "electron .",
+    "build": "electron-packager ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "concurrently": "^6.2.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "wait-on": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.9",
+    "electron": "^13.2.1",
+    "electron-packager": "^15.3.0",
+    "nodemon": "^2.0.12"
+  }
+}

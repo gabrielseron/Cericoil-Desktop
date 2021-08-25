@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cericoil : Register</title>
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="icon" type="image/svg" href="/assets/img/logo_blue.svg"/>
+    <script src="/assets/scripts/script.js" defer></script>
+</head>
+<body class="auth">
+    <div class="logo">
+        <img src="/assets/img/logo.svg" alt="Logo">
+        <h2>Cericoil</h2>
+    </div>
+    <div class="formContainer">
+        <h3>Register</h3>
+        <form action="/register" method="POST">
+            {{#each errorList}}
+                <p class="error-message">{{message}}</p>
+            {{/each}}
+            {{#if message}}
+                <p class="error-message">{{message}}</p>
+            {{/if}}
+            {{#if error}}
+                <p class="error-message">{{error}}</p>
+            {{/if}}
+            <input type="email" name="mailUser"  placeholder="Email">
+            <input type="text" name="nameUser"  placeholder="Username">
+            <input type="password" name="passUser"  placeholder="Password">
+            <input type="password" name="rePass"  placeholder="Confirm Password">
+            <button>Register</button>
+        </form>
+        <p>Already have an account ? <a href="/">Login</a></p>
+    </div>
+</body>
+</html>

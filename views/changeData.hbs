@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cericoil : Analyze</title>
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="icon" type="image/svg" href="/assets/img/logo_blue.svg"/>
+    <script src="/assets/scripts/script.js" defer></script>
+</head>
+<body class="changeData">
+    <div class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/analyze">Analyze</a>
+        <a href="/changeMail">Change Mail</a>
+        <a href="/changePass">Change Password</a>
+        <a href="/signout" class="signout">Signout</a>
+    </div>
+
+    <div class="hamburgerContainer">
+        <span class="hamburger" onclick="openNav()">&#9776;</span>
+    </div>
+
+
+    {{#if changeMail}}
+        <h1>Change your Email</h1>
+
+        <div class="formContainer changeMail">
+            <h3>Change Email</h3>
+            <form action="/changeMail" method="POST">
+                {{#each errorList}}
+                    <p class="error-message">{{message}}</p>
+                {{/each}}
+                {{#if message}}
+                    <p class="error-message">{{message}}</p>
+                {{/if}}
+                {{#if error}}
+                    <p class="error-message">{{error}}</p>
+                {{/if}}
+                <input type="email" name="newMailUser" placeholder="New Email">
+                <input type="password" name="passUser" placeholder="Password">
+                <button>Change Email</button>
+            </form>
+        </div>
+    {{else}}
+        <h1>Change your password</h1>
+
+        <div class="formContainer changePass">
+            <h3>Change Password</h3>
+            <form action="/changePass" method="POST">
+                {{#each errorList}}
+                    <p class="error-message">{{message}}</p>
+                {{/each}}
+                {{#if message}}
+                    <p class="error-message">{{message}}</p>
+                {{/if}}
+                {{#if error}}
+                    <p class="error-message">{{error}}</p>
+                {{/if}}
+                <input type="password" name="newPassUser" placeholder="New Password">
+                <input type="password" name="passUser" placeholder="Current Password">
+                <button>Change Password</button>
+            </form>
+        </div>
+    {{/if}}
+</body>
+</html>

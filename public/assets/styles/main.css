@@ -1,0 +1,252 @@
+*
+{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*                  Auth                  */
+
+.auth
+{
+    background-color: #2196f3;
+}
+
+.auth .logo
+{
+    height: 25vh;
+    width: 33%;
+    padding: 7.5vh 33% 0 33%;
+    text-align: center;
+}
+
+.auth .logo img
+{
+    height: 50%;
+}
+
+.auth .logo h2
+{
+    color: white;
+    font-size: 2rem;
+}
+
+.formContainer
+{
+    width: 50vw;
+    margin: 0 auto 10vh auto;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.formContainer h3
+{
+    text-align: center;
+    margin-top: 7.5%;
+    font-size: x-large;
+    color: white;
+}
+
+.formContainer form
+{
+    margin: 5vh 0 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+}
+
+.formContainer form button
+{
+    margin-bottom: 10%;
+    margin-top: 2%;
+}
+
+.formContainer form .error-message
+{
+    color: #CC4641;
+    margin-bottom: 5%;
+}
+
+.formContainer form input
+{
+    border: none;
+    outline: none;
+    background-color: #2196f3;
+    color: white;
+    border-bottom: 1px solid white;
+    margin-bottom: 2vh;
+    width: 62.5%;
+}::placeholder
+{
+    color: white;
+}
+
+.formContainer form button
+{
+    width: 33%;
+    background-color: transparent;
+    border:2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.formContainer p
+{
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 2.5vh;
+    margin-right: 2vw;
+    text-align: end;
+}
+
+.formContainer p a
+{
+    color: white;
+    font-style: italic;
+}
+
+/*                Sidenav                 */
+
+.sidenav
+{
+  height: 100vh;
+  width: 15vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #64b4f5;
+  overflow-x: hidden;
+  padding-top: 60px;
+  text-align: end;
+}
+
+.sidenav a
+{
+  padding: 8px 2.5vw 8px 8px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  display: block;
+}
+
+.sidenav a:hover
+{
+  text-shadow: 0 0 1px black;
+}
+
+.sidenav .closebtn
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 36px;
+}
+
+.sidenav .signout
+{
+    margin-bottom: 0;
+}
+
+.hamburgerContainer
+{
+    width: 100vw;
+    text-align: end;
+    margin-top: 10px;
+}
+
+.hamburgerContainer .hamburger
+{
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  margin-right: 2.5vw;
+}
+
+
+/*                  Analyze                  */
+
+.analyze
+{
+    background-color: #2196f3;
+    width: 85vw;
+
+}
+
+.analyze h1
+{
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.analyze-container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: start;
+    overflow-x: hidden;
+}
+
+.analyze-container .analyze-content
+{
+    margin-left: 2vw;
+    flex-grow: 1;
+    margin-right: 5vw;
+    width: 33%;
+}
+
+.analyze-container .results
+{
+    flex-grow: 2;
+}
+
+.analyze-container .results table
+{
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+.analyze-container .results table .key
+{
+    border-right: 1px solid white;
+    text-align: center;
+    text-transform: capitalize;
+}
+.analyze-container .results table th
+{
+    border-bottom: 1px solid white;
+}
+
+.analyze-container .results table th p
+{
+    text-decoration: none;
+    color: white;
+}
+
+.analyze-container .results table td
+{
+    padding: 0.5vh 1vw;
+    color: white;
+}
+
+/*                Change Data                */
+
+.changeData
+{
+    background-color: #2196f3;
+    width: 85vw;
+
+}
+
+.changeData h1
+{
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 5vh;
+}
